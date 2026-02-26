@@ -6,14 +6,6 @@ Based on the AWS Well-Architected Framework and Cloud Adoption Framework evaluat
 ![cloud architecture diagram](cloud_architecture.png)
 
 
-    classDef aws fill:#FF9900,stroke:#232F3E,stroke-width:2px,color:white;
-    class IGW,ALB,Route53 aws;
-    classDef ec2 fill:#EF3A47,stroke:#232F3E,stroke-width:2px,color:white;
-    class Web1,Web2 ec2;
-    classDef rds fill:#3B48CC,stroke:#232F3E,stroke-width:2px,color:white;
-    class DB1,DB2 rds;
-```
-
 ## Architectural Components & WAF Alignment
 
 ### 1. **Amazon Route 53 & Application Load Balancer (ALB)**
