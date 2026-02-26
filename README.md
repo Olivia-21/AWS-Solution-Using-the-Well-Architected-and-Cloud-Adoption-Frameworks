@@ -13,6 +13,7 @@ According to the lab requirements, three main deliverables are provided:
     *   **CAF Readiness Summary (Task 3):** Offers a comprehensive analysis across the six CAF perspectives (Business, People, Governance, Platform, Security, and Operations) identifying enablers necessary for successful enterprise migration.
     *   **Reflection:** A 150-word summary emphasizing the shift from legacy physical infrastructure management to holistic, cloud-native operational paradigms learned throughout the module.
 2.  **[architecture_diagram.md](architecture_diagram.md)**: 
+      ![cloud architecture diagram](cloud_architecture.png)
     *   **Improved Architecture Diagram (Task 4):** A fully-rendered Mermaid flow diagram outlining the modernized cloud topology. The architecture implements Multi-AZ redundancies natively, leveraging scalable EC2 Auto Scaling Groups and managed Amazon RDS deployments inside a Virtual Private Cloud (VPC) adhering securely to the Well-Architected Framework guidelines.
 
 ## Approach Description
