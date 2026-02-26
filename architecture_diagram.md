@@ -2,25 +2,9 @@
 
 Based on the AWS Well-Architected Framework and Cloud Adoption Framework evaluation, the following architecture diagram and description represent a highly available, secure, and scalable design for the migrated two-tier web application.
 
-```mermaid
-graph TD
-    User([End User]) --> |HTTPS| Route53[Amazon Route 53]
-    Route53 --> IGW[Internet Gateway]
-    
-    subgraph VPC [AWS Cloud - Custom VPC]
-        IGW --> |Traffic Routing| ALB[Application Load Balancer]
-        
-        subgraph AZ1 [Availability Zone A]
-            ALB --> |Forward Traffic| Web1[EC2 Instances - Frontend ASG]
-            Web1 --> |DB Reads/Writes| DB1[(Amazon RDS Primary)]
-        end
-        
-        subgraph AZ2 [Availability Zone B]
-            ALB --> |Forward Traffic| Web2[EC2 Instances - Frontend ASG]
-            Web2 --> |Standby| DB2[(Amazon RDS Standby)]
-            DB1 -. Synchronous Replication .- DB2
-        end
-    end
+**Architecture Diagram:**
+![cloud architecture diagram](cloud_architecture.png)
+
 
     classDef aws fill:#FF9900,stroke:#232F3E,stroke-width:2px,color:white;
     class IGW,ALB,Route53 aws;
